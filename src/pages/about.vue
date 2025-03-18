@@ -2,7 +2,7 @@
  * @Author: zyjxh 765802997@qq.com
  * @Date: 2025-03-12 12:43:41
  * @LastEditors: zyjxh 765802997@qq.com
- * @LastEditTime: 2025-03-13 12:56:13
+ * @LastEditTime: 2025-03-18 21:40:16
  * @FilePath: /geek-admin/src/pages/about.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -15,11 +15,15 @@
     <div @click="add">{{ count }}</div>
     <div> {{double}} </div>
     <div @click="addAsync">{{ "addasync" }}</div>
+    <Heading :level="3"> hello geekbang</Heading>
+    <Todo />
 </template>
 <script setup>
 import { computed, ref } from 'vue'
 import { useFullscreen } from '@vueuse/core'
 import Rate from '../components/Rate.vue'
+import Heading from '../components/Heading.jsx'
+import Todo from '../components/Todo.jsx'
 
 import { useStore } from '../store/gvuex.js'
 let store = useStore()
