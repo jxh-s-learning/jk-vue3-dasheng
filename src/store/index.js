@@ -6,7 +6,7 @@
  * @FilePath: /geek-admin/src/store/index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-import { createStore } from "./gvuex.js";
+import { createStore } from "./gvuex.js"
 
 const store = createStore({
     state() {
@@ -23,7 +23,7 @@ const store = createStore({
         asyncAdd({commit}) {
             setTimeout(() => {
                 commit('add')
-            }, 1000);
+            }, 1000)
         }
     },
     mutations: {

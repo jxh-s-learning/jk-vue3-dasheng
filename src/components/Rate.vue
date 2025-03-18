@@ -2,7 +2,7 @@
  * @Author: zyjxh 765802997@qq.com
  * @Date: 2025-03-12 20:35:20
  * @LastEditors: zyjxh 765802997@qq.com
- * @LastEditTime: 2025-03-13 12:51:04
+ * @LastEditTime: 2025-03-18 22:37:49
  * @FilePath: /geek-admin/src/components/Rate.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -17,7 +17,7 @@
   </div>
 </template>
 <script setup>
-import { defineProps, defineEmits,computed, ref, watch} from 'vue';
+import { defineProps, defineEmits,computed, ref, watch} from 'vue'
 
 let props = defineProps({
 //   value: Number,
@@ -26,10 +26,10 @@ let props = defineProps({
     type: String,
     default: "orange",
   },
-});
-let rate = computed(() =>
-  "★★★★★☆☆☆☆☆".slice(5 - props.value, 10 - props.value)
-);
+})
+// let rate = computed(() =>
+//   "★★★★★☆☆☆☆☆".slice(5 - props.value, 10 - props.value)
+// )
 
 const themeObj = {
   black: "#00",
@@ -39,22 +39,22 @@ const themeObj = {
   yellow: "#fadb14",
   green: "#73d13d",
   blue: "#40a9ff",
-};
+}
 
 const fontstyle = computed(() => {
-  return `color:${themeObj[props.theme]};`;
-});
+  return `color:${themeObj[props.theme]};`
+})
 
-let width = ref(props.modelValue);
+let width = ref(props.modelValue)
 
 function mouseOver(i) {
-  width.value = i;
+  width.value = i
 }
 
 function mouseOut() {
-  width.value = props.modelValue;
+  width.value = props.modelValue
 }
-const fontwidth = computed(() => `width:${width.value}em;`);
+const fontwidth = computed(() => `width:${width.value}em;`)
 
 // let emits = defineEmits('update-rate')
 let emits = defineEmits(['update:modelValue'])
@@ -63,8 +63,8 @@ function onRate(num) {
 }
 
 watch(() => props.modelValue, (newValue) => {
-  width.value = newValue;
-});
+  width.value = newValue
+})
 </script>
 <style scoped>
 .rate {
