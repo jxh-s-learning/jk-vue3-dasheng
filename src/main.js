@@ -6,19 +6,19 @@
  * @FilePath: /geek-admin/src/main.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from './renderer.js'
+import App from './App1.vue'
 import Router from './router/index.js'
 import Store from './store/index.js'
 import Element3 from 'element3'
 import 'element3/lib/theme-chalk/index.css'
 const app = createApp(App)
-    .use(Store)
-    .use(Router)
-    .use(Element3)
+    // .use(Store)
+    // .use(Router)
+    // .use(Element3)
 
 
 // 这里设置 app.config 相关配置
-app.config.devtools = true
+// app.config.devtools = true
 
 app.mount('#app')
